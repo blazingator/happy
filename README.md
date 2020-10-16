@@ -1,6 +1,6 @@
 # Happy - app para apoio a orfanatos
 
-## Feito durante a 3ª edição da NextLevelWeek realizada pela (Rocketseat)['https://rocketseat.com.br']
+## Feito durante a 3ª edição da NextLevelWeek realizada pela [Rocketseat](https://rocketseat.com.br/)
 
 ---
 
