@@ -19,7 +19,7 @@ export default{
     const requestImages = req.files as Express.Multer.File[]
 
     const images = requestImages.map(img => {
-      return { path: img.filename }
+      return { url: img.filename }
     })
 
     const orphanagesRepository = getRepository(Orphanage)
@@ -42,7 +42,7 @@ export default{
       opening_hours: Yup.string().required(),
       open_on_weekends: Yup.boolean().required(),
       images: Yup.array(Yup.object().shape({
-        path: Yup.string().required()
+        url: Yup.string().required()
       }))
     })
   

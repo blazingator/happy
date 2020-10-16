@@ -14,7 +14,7 @@ export class createImages1602605964404 implements MigrationInterface {
           generationStrategy: 'increment'
         },
         {
-          name: 'path',
+          name: 'url',
           type: 'varchar'
         },
         {

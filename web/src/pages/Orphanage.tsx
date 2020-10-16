@@ -20,7 +20,7 @@ interface Orphanage{
   opening_hours: string
   open_on_weekends: boolean
   images: Array<{
-    path: string
+    url: string
     id: number
   }>
 }
@@ -49,7 +49,7 @@ export function Orphanage() {
 
       <main>
         <div className="orphanage-details">
-          <img src={orphanage.images[activeImageIndex].path} alt={orphanage.name} />
+          <img src={orphanage.images[activeImageIndex].url} alt={orphanage.name} />
 
           <div className="images">
             {orphanage.images.map((img, index) => (
@@ -58,7 +58,7 @@ export function Orphanage() {
                 key={img.id}
                 className={activeImageIndex === index ? 'active' : ''}
                 type="button">
-                <img src={img.path} alt={orphanage.name} />
+                <img src={img.url} alt={orphanage.name} />
               </button> 
             ))}  
           </div>

@@ -1,10 +1,15 @@
+import os from 'os'
+
 import Image from '../models/Image'
+
+const netIfs = os.networkInterfaces()
+const localIp = netIfs.enp3s0[0].address
 
 export default{
   render(image: Image){
     return {
       id: image.id,
-      path: `http://localhost:3333/uploads/${image.path}`
+      url: `http://${localIp}:3333/uploads/${image.url}`
     }
   },
   renderMany(images: Image[]){
